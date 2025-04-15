@@ -7,9 +7,13 @@ class Heroe {
         int ataque;
         int machineLearning;
     
-    private:
+    public:
         Heroe(int puntos_vida);
         ~Heroe();
+        int getVida();
+        int getAtaque();
+        void recibirAtaque(int dañoRecibido);
+
 };
 
 #endif
