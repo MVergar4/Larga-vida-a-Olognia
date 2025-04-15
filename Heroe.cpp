@@ -2,7 +2,6 @@
 #include "Heroe.h"
 
 
-
 Heroe::Heroe(int vida){
     this->vida = vida;
     this->ataque = 2;
@@ -18,6 +17,13 @@ int Heroe::getAtaque(){
 }
 
 void Heroe::recibirAtaque(int dañoRecibido){
-    int vida = getVida();
     vida -= dañoRecibido;
+}
+
+void Heroe::aumentarExperiencia() {
+    machineLearning++;
+    if (machineLearning == 5) {
+        ataque++;
+        machineLearning = 0;
+    }
 }

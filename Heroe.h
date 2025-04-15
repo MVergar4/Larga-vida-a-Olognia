@@ -9,10 +9,10 @@ class Heroe {
     
     public:
         Heroe(int puntos_vida);
-        ~Heroe();
         int getVida();
         int getAtaque();
         void recibirAtaque(int dañoRecibido);
+        void aumentarExperiencia();
 
 };
 
