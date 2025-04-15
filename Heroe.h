@@ -8,7 +8,8 @@ class Heroe {
         int machineLearning;
     
     public:
-        Heroe(int puntos_vida);
+        Heroe() = default;
+        Heroe(int vida);
         int getVida();
         int getAtaque();
         void recibirAtaque(int dañoRecibido);
