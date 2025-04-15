@@ -1,7 +1,6 @@
 #include <iostream>
 #include "Heroe.h"
 
-using namespace std;
 
 
 Heroe::Heroe(int vida){
