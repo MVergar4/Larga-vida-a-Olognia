@@ -1,6 +1,8 @@
 #ifndef HEROE
 #define HEROE
 
+#include "Esbirro.h"
+
 class Heroe {
     private:
         int vida;
@@ -9,11 +11,12 @@ class Heroe {
     
     public:
         Heroe(int puntos_vida);
+        ~Heroe();
         int getVida();
         int getAtaque();
         void recibirAtaque(int dañoRecibido);
+       // void atacar(Esbirro* objetivo);
         void aumentarExperiencia();
-
 };
 
 #endif
