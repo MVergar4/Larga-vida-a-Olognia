@@ -13,7 +13,6 @@ class Combate {
    
     public:
         Combate();
-        ~Combate();
         void iniciarCombate(); // Simulacion de combate
 
 };

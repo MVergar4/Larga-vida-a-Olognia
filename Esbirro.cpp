@@ -18,8 +18,9 @@ int Esbirro::getAtaque(){
 
 void Esbirro::recibirAtaque(int dañoRecibido){
     vida -= dañoRecibido;
-    ataquesRecibidos += 1;
-
+    if (cano) {
+        ataquesRecibidos += 1;
+    }
 }
 
 bool Esbirro::esCano(){
@@ -27,7 +28,7 @@ bool Esbirro::esCano(){
 }
 
 bool Esbirro::duplicacion(){
-    if(ataquesRecibidos == 2){
+    if (cano && (ataquesRecibidos == 2)) {
         return true;
     }
     return false;

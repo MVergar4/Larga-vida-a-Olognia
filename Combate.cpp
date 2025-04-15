@@ -31,35 +31,43 @@ Combate::Combate(){
         esbirros.push_front(Esbirro(vidaEsbirros[i], ataqueEsbirros[i], esCano[i]));
     }
 
-    delete[] vidaEsbirros;
-    delete[] ataqueEsbirros;
-    delete[] esCano;
 }
 
 void Combate::iniciarCombate(){
+    Esbirro e = esbirros.back();
     while(true) {
-        Esbirro e = esbirros.back();
+        //std::cout << "Esbirro: " << e.getVida() << std::endl;
+        if (e.getVida() > heroe.getAtaque()) {
+            dañoCausado += heroe.getAtaque();
+        } else {
+            dañoCausado += e.getVida();
+        }
         e.recibirAtaque(heroe.getAtaque());
+        //std::cout << "ataque: " << heroe.getAtaque() << std::endl;
+        std::cout << "Esbirro: " << e.getVida() << std::endl;
+        heroe.recibirAtaque(e.getAtaque());
+        std::cout << "Heroe: " << heroe.getVida() << std::endl;
+        if (heroe.getVida() <= 0) {
+            std::cout << dañoCausado << std::endl;
+            std::cout << "RIP mechón" << std::endl;
+            break;
+        }
         if (e.esCano() && e.duplicacion()) {
+            std::cout << "cano: " << e.esCano() << std::endl;
             int ataque2 = e.getAtaque() - 1;
             int vida2 = e.getVida() - 1;
             esbirros.pop_back();
             esbirros.push_back(Esbirro(vida2, ataque2, false));
             esbirros.push_back(Esbirro(vida2, ataque2, false));
+            e = esbirros.back();
         }
         if (e.getVida() <= 0) {
-            dañoCausado = e.getVida();
             esbirros.pop_back();
+            e = esbirros.back();
             heroe.aumentarExperiencia();
-        } else {
-            dañoCausado = heroe.getAtaque();
-        }
-        heroe.recibirAtaque(e.getAtaque());
-        if (heroe.getVida() <= 0) {
-            std::cout << "RIP mechón" << std::endl;
-            break;
         }
         if (esbirros.empty()) {
+            std::cout << dañoCausado << std::endl;
             std::cout << "EZ pizi" << std::endl;
             break;
         }

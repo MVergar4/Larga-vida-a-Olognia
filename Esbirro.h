@@ -12,7 +12,6 @@ class Esbirro {
     
     public:
         Esbirro(int puntosVida, int puntosAtaque, bool esCano);
-        ~Esbirro();
         int getVida();
         int getAtaque();
         bool esCano();
