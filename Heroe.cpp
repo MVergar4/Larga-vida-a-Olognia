@@ -1,7 +1,6 @@
 #include <iostream>
 #include "Heroe.h"
 
-
 Heroe::Heroe(int vida){
     this->vida = vida;
     this->ataque = 2;
