@@ -4,18 +4,22 @@
 #include "Heroe.h"
 
 class Esbirro {
-    protected:
+    private:
         int vida;
         int ataque;
-        
+        bool cano;
+        int ataquesRecibidos;
     
     public:
-        Esbirro(int puntosVida, int puntosAtaque);
+        Esbirro(int puntosVida, int puntosAtaque, bool esCano);
         ~Esbirro();
         int getVida();
         int getAtaque();
+        bool esCano();
         void recibirAtaque(int puntosAtaque);
-        void atacar(Heroe* objetivo);
+        bool duplicacion();
+
+        // void atacar(Heroe* objetivo);
 
 };
 
