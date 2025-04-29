@@ -43,13 +43,8 @@ void Combate::iniciarCombate(){
         }
         e.recibirAtaque(heroe.getAtaque());
         heroe.recibirAtaque(e.getAtaque());
-        if (heroe.getVida() <= 0) {
-            std::cout << dañoCausado << std::endl;
-            std::cout << "RIP mechón" << std::endl;
-            break;
-        }
         if (e.esCano() && e.duplicacion()) {
-            int ataque2 = e.getAtaque() - 1;
+            int ataque2 = e.getAtaque() - 1; // Si el CANO tenía 1 de ataque ahora tendrá 0, por lo que aguantará lo que le quede de vida, pero será inofensivo
             int vida2 = e.getVida() - 1;
             esbirros.pop_back();
             esbirros.push_back(Esbirro(vida2, ataque2, false));
@@ -60,6 +55,16 @@ void Combate::iniciarCombate(){
             esbirros.pop_back();
             e = esbirros.back();
             heroe.aumentarExperiencia();
+        }
+        if (heroe.getVida() <= 0 && !esbirros.empty()) {
+            std::cout << dañoCausado << std::endl;
+            std::cout << "RIP mechón" << std::endl;
+            break;
+        // Como el esbirro y el mechón se atacan a la vez, existe la posibilidad de que ambos se mueran en el último ataque, esto resulta en un empate
+        } else if (heroe.getVida() <= 0 && esbirros.empty()) {
+            std::cout << dañoCausado << std::endl;
+            std::cout << "Empate" << std::endl;
+            break;
         }
         if (esbirros.empty()) {
             std::cout << dañoCausado << std::endl;
