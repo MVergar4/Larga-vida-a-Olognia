@@ -3,6 +3,16 @@
 #include "Esbirro.h"
 #include "Combate.h"
 
+
+/*
+ * Constructor de la clase combate
+ * Inicializa el combate entre el heroe y los esbirros mediante los datos entregados en la entrada.
+ * Primera entrada se asigna la vida del Heroe.
+ * Segunda entrada se asigna la cantidad de esbirros Generados.
+ * Tercera entrada serán las vidas de los esbirros.
+ * Cuarta entrada será los ataques de los birros.
+ * Quinta entrada serán si son CANO o no.
+ */
 Combate::Combate(){
     this->dañoCausado = 0;
 
@@ -33,6 +43,11 @@ Combate::Combate(){
 
 }
 
+/*
+ * Esta función simula el combate con el heroe y esbirros.
+ * Inicia un bucle que representa el combate entre el heroe y los esbirros
+ * El combate termina cuando el heroe muere o cuando todos los esbirros son derrotados
+ */
 void Combate::iniciarCombate(){
     Esbirro e = esbirros.back();
     while(true) {
@@ -47,7 +62,7 @@ void Combate::iniciarCombate(){
             std::cout << dañoCausado << std::endl;
             std::cout << "RIP mechón" << std::endl;
             break;
-        }
+        }   
         if (e.esCano() && e.duplicacion()) {
             int ataque2 = e.getAtaque() - 1;
             int vida2 = e.getVida() - 1;
