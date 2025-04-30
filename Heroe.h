@@ -12,9 +12,9 @@
  */
 class Heroe {
     private:
-        int vida;              /**< Puntos de vida del héroe. */
-        int ataque;            /**< Daño que puede infligir el héroe. */
-        int machineLearning;   /**< Contador de experiencia. Cada 5 incrementos aumenta el ataque. */
+        int vida;            
+        int ataque;            
+        int machineLearning;   
     
     public:
         /**
