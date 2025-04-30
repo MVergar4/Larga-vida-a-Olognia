@@ -6,11 +6,11 @@
 
 /*
  * Constructor de la clase combate
- * Inicializa el combate entre el heroe y los esbirros mediante los datos entregados en la entrada.
- * Primera entrada se asigna la vida del Heroe.
+ * Inicializa el combate entre el héroe y los esbirros mediante los datos entregados en la entrada.
+ * Primera entrada se asigna la vida del Héroe.
  * Segunda entrada se asigna la cantidad de esbirros Generados.
  * Tercera entrada serán las vidas de los esbirros.
- * Cuarta entrada será los ataques de los birros.
+ * Cuarta entrada será los ataques de los esbirros.
  * Quinta entrada serán si son CANO o no.
  */
 Combate::Combate(){
@@ -44,9 +44,9 @@ Combate::Combate(){
 }
 
 /*
- * Esta función simula el combate con el heroe y esbirros.
- * Inicia un bucle que representa el combate entre el heroe y los esbirros
- * El combate termina cuando el heroe muere o cuando todos los esbirros son derrotados
+ * Esta función simula el combate con el héroe y esbirros.
+ * Inicia un bucle que representa el combate entre el héroe y los esbirros
+ * El combate termina cuando el héroe muere o cuando todos los esbirros son derrotados
  */
 void Combate::iniciarCombate(){
     Esbirro e = esbirros.back();

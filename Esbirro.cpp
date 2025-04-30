@@ -4,11 +4,11 @@
 /**
  * Constructor de la clase esbirro
  * 
- * Inicializa un esbirro con puntos de vida, puntos de ataque, y si es cano.
+ * Inicializa un esbirro con puntos de vida, puntos de ataque, y si es CANO.
  *
  * @param puntosVida puntos de vida iniciales del esbirro
  * @param puntosAtaque puntos de ataque del esbirro
- * @param esCano determina si el esbirro es cano o no
+ * @param esCano determina si el esbirro es CANO o no
  */
 
 Esbirro::Esbirro(int puntosVida, int puntosAtaque, bool esCano){
@@ -35,7 +35,7 @@ int Esbirro::getAtaque(){
 }
 /**
  *  Esta función se encarga de aplicar "daño" al esbirro reduciendo sus puntos de vida. Y en el caso 
- *  de ser cano contar los ataques recibidos.
+ *  de ser CANO contar los ataques recibidos.
  * 
  */
 void Esbirro::recibirAtaque(int dañoRecibido){
@@ -45,9 +45,9 @@ void Esbirro::recibirAtaque(int dañoRecibido){
     }
 }
 /**
- * Esta función determina si esl esbirro es Cano
+ * Esta función determina si esl esbirro es CANO
  * 
- * @return TRUE si es cano, y FALSE si no es cano
+ * @return TRUE si es CANO, y FALSE si no es CANO
  * 
  */
 bool Esbirro::esCano(){
@@ -55,7 +55,7 @@ bool Esbirro::esCano(){
 }
 
 /**
- *  Determina si el esbirro es cano y ha recibido los ataques suficientes para duplicarse.
+ *  Determina si el esbirro es CANO y ha recibido los ataques suficientes para duplicarse.
  * 
  * @return TRUE si el esbirro puede duplicarse, y FALSE si no.
  */

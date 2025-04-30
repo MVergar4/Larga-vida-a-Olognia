@@ -4,10 +4,10 @@
 #include "Esbirro.h"
 
 /**
- * @class Heroe
+ * @class Héroe
  * Clase que representa un héroe en el juego.
  * 
- * La clase Heroe contiene los atributos y comportamientos básicos de un personaje principal, 
+ * La clase Héroe contiene los atributos y comportamientos básicos de un personaje principal, 
  * incluyendo vida, ataque y un sistema de experiencia basado en el número de enemigos derrotados.
  */
 class Heroe {
@@ -34,14 +34,14 @@ class Heroe {
         /**
          * Obtiene los puntos de vida actuales del héroe.
          * 
-         * @return int Puntos de vida.
+         * @return Puntos de vida.
          */
         int getVida();
 
         /**
          * Obtiene el valor actual de ataque del héroe.
          * 
-         * @return int Valor de ataque.
+         * @return Valor de ataque.
          */
         int getAtaque();
 

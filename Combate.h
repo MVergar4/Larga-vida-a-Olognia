@@ -7,10 +7,10 @@
 
 
 /**
- * Clase que representa un combate entre Heroe y esbirros
- * Permite inicializar el combate con los respectivos datos del Heroe y esbirros
+ * @class Combate
+ * Clase que representa un combate entre Héroe y esbirros
  * 
- * 
+ * Permite inicializar el combate con los respectivos datos del Héroe y esbirros
  */
 class Combate {
     private:
@@ -27,9 +27,8 @@ class Combate {
 
         /** 
          * Ejecuta la lógica del combate junto los datos asignados de entrada mediante el constructor.
-         * 
          */
-        void iniciarCombate(); // Simulacion de combate
+        void iniciarCombate(); // Simulación de combate
 
 };
 

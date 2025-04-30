@@ -2,19 +2,18 @@
 #include "Heroe.h"
 
 /**
- *  Implementación de la clase Heroe
+ * Implementación de la clase Héroe
  * 
- * Esta clase contiene la implementación del Heroe, el cual tiene puntos de vida, puntos de ataque, y un indicador
- * de aunmento de daño en base a los esbirros asesinados, incrementado en base a la experiencia obtenida
+ * Esta clase contiene la implementación del Héroe, el cual tiene puntos de vida, puntos de ataque, y un indicador
+ * de aumento de daño en base a los esbirros asesinados, incrementado en base a la experiencia obtenida
  * 
  */
 
 
  /**
-  * Constructor de clase Heroe 
+  * Constructor de clase Héroe 
   * 
-  * 
-  * Incializa un heroe con lois puntos de vida especificado, un ataque con un daño predeterminado, y la experiencia en 0
+  * Incializa un heroe con los puntos de vida especificados, un ataque con un daño predeterminado, y la experiencia en 0
   * 
   * @param vida Puntos de vida iniciales del héroe 
   */
@@ -28,7 +27,7 @@ Heroe::Heroe(int vida){
 /**
  * Esta función obtiene los puntos de vida actuales del héroe.
  * 
- * @return int Puntos de vida restantes.
+ * @return Puntos de vida restantes.
  */
 int Heroe::getVida(){
     return vida;
@@ -38,7 +37,7 @@ int Heroe::getVida(){
 /**
  * Esta función obtiene el valor actual de ataque del héroe.
  * 
- * @return int Valor del daño que el héroe puede infligir.
+ * @return Valor del daño que el héroe puede infligir.
  */
 int Heroe::getAtaque(){
     return ataque;
