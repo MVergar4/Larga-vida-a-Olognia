@@ -22,7 +22,7 @@ class Esbirro {
     
     public:
         /**
-         * Constructo de la clase esbirro
+         * Constructor de la clase esbirro
          * 
          * Incializa un esbirro con los puntos de vida, ataque y si es CANO
          * 

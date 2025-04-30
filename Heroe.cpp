@@ -12,7 +12,7 @@
 
 
  /**
-  * Constructor de clase Heroe 
+  * Constructor de clase Héroe 
   * 
   * 
   * Incializa un heroe con lois puntos de vida especificado, un ataque con un daño predeterminado, y la experiencia en 0
@@ -29,7 +29,7 @@ Heroe::Heroe(int vida){
 /**
  * Esta función obtiene los puntos de vida actuales del héroe.
  * 
- * @return int Puntos de vida restantes.
+ * @return Puntos de vida restantes.
  */
 int Heroe::getVida(){
     return vida;
@@ -39,7 +39,7 @@ int Heroe::getVida(){
 /**
  * Esta función obtiene el valor actual de ataque del héroe.
  * 
- * @return int Valor del daño que el héroe puede infligir.
+ * @return Valor del daño que el héroe puede infligir.
  */
 int Heroe::getAtaque(){
     return ataque;
