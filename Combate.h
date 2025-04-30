@@ -20,10 +20,14 @@ class Combate {
    
     public:
         /** 
-         * Constructor de la clase combate
+         * Constructor de la clase Combate
          * Inicializa el combate entre un héroe y los esbirros. 
         */
         Combate();
+        /**
+         * Destructor de la clase Combate
+         */
+        ~Combate();
 
         /** 
          * Ejecuta la lógica del combate junto los datos asignados de entrada mediante el constructor.

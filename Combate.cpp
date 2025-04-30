@@ -43,6 +43,10 @@ Combate::Combate(){
 
 }
 
+Combate::~Combate() {
+    this->esbirros.~deque();
+}
+
 /*
  * Esta función simula el combate con el héroe y esbirros.
  * Inicia un bucle que representa el combate entre el héroe y los esbirros
